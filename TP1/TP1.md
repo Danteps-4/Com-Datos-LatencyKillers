@@ -80,9 +80,12 @@ Se quiere representar una transimisión serie, los bits se transmiten bit a bit 
 No, no es el mejor paradigma si busco transimitir datos de forma bidireccional. En cuanto a la rapidez sí, porque es síncrono y no necesita bits de inicio/parada como una comunicacion asíncrona. Y en cuanto a la comunicación bidireccional sería mejor implementar dos canales separados para poder transimitir y recibir datos simultáneamente.
 
 Tomando nuestro nombre de grupo: Latency Killers
-La cuarta letra es: "e"
-Identificando la letra "e" en codigo ASCII: 101
-Conviertiendo 101 a binario: 01100101
+- La cuarta letra es: "e"
+
+- Identificando la letra "e" en codigo ASCII: 101
+
+- Conviertiendo 101 a binario: 01100101
+
 ![Grafico](grafico.png)
 
 ---
