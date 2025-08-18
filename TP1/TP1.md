@@ -7,6 +7,7 @@
 **Universidad Nacional de Córdoba**  
 **Comunicaciones de datos**
 **Santiago M. Henn**  
+**... Cuneo**  
 **28/08/2025**
 
 ---
@@ -82,7 +83,7 @@ Tomando nuestro nombre de grupo: Latency Killers
 La cuarta letra es: "e"
 Identificando la letra "e" en codigo ASCII: 101
 Conviertiendo 101 a binario: 01100101
-
+![Grafico](grafico.png)
 
 ---
 
