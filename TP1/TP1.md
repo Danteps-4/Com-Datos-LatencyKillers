@@ -1,13 +1,14 @@
 # Repaso de fundamentos esenciales e introducción a Packet Tracer
 
-**Dante Augsburger**   
+**Nombres**  
+_Dante Augsburger;_   
 
 **Latency Killers** 
 
 **Universidad Nacional de Córdoba**  
 **Comunicaciones de datos**
 **Santiago M. Henn**  
-**... Cuneo**  
+**Cuneo**  
 **28/08/2025**
 
 ---
