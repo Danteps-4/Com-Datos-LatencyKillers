@@ -1,6 +1,7 @@
 # Repaso de fundamentos esenciales e introducción a Packet Tracer
 
 **Dante Augsburger**   
+**Martino Fioramonti**
 
 **Latency Killers** 
 
@@ -15,6 +16,7 @@
 ### Información de los autores
  
 - **_dante.augsburger@mi.unc.edu.ar_**
+- **_martino.fioramonti@mi.unc.edu.ar_**
 
 ---
 
@@ -87,6 +89,42 @@ Tomando nuestro nombre de grupo: Latency Killers
 - Conviertiendo 101 a binario: 01100101
 
 ![Grafico](grafico.png)
+
+Dada la pendiente en los niveles de tensión que se observan en el gráfico dados en el TP, la forma correcta de medir 
+es **en el centro de cada intervalo de bit**.  
+- Si se midiera en los bordes (donde ocurre la transición), podría haber dudas por ruido o por la propia pendiente.  
+- En cambio, en el punto medio de cada celda temporal el nivel ya está estabilizado en 0 o 1, lo cual garantiza una lectura confiable.
+
+---
+
+### Actividad 3
+
+La técnica de modulación que se observa en el gráfico dado es **ASK (Amplitude Shift Keying)**, 
+también conocida como **modulación por desplazamiento de amplitud**.  
+En este esquema, la amplitud de la portadora cambia en función de si el bit transmitido es 0 o 1.
+
+La siguiente figura muestra cómo se vería la señal digital modulada en **ASK** para la secuencia binaria dada.  
+Se observa que, en los intervalos donde el bit es “1”, aparece una portadora sinusoidal con amplitud constante, 
+mientras que en los intervalos donde el bit es “0” la portadora se apaga y la señal permanece en reposo.
+
+![Grafico](image.png)
+
+Otras técnicas de modulación basadas en los mismos principios son:
+- **FSK (Frequency Shift Keying)**: varía la frecuencia de la portadora según el bit.
+- **PSK (Phase Shift Keying)**: varía la fase de la portadora según el bit.
+- **QAM (Quadrature Amplitude Modulation)**: combina variaciones de amplitud y fase para transmitir más bits por símbolo.
+
+El **Bit Error Rate (BER)** es la tasa de error de bits, definida como la razón entre el número de bits 
+recibidos erróneamente y el número total de bits transmitidos.  
+Es una medida de la confiabilidad del sistema de comunicación.  
+
+En términos de BER:
+- **ASK** es la más sensible al ruido, ya que las variaciones de amplitud son muy vulnerables a interferencias.  
+- **FSK** mejora el desempeño, porque la frecuencia es más fácil de discriminar que la amplitud en entornos ruidosos.  
+- **PSK** suele tener aún mejor BER en condiciones de ruido moderado.  
+- **QAM**, al transmitir más información por símbolo, puede aumentar la eficiencia espectral, pero también se vuelve más sensible al ruido a medida que crece el número de niveles.  
+
+En general, **PSK y FSK** ofrecen mejores prestaciones que ASK en términos de BER para canales ruidosos.
 
 ---
 
