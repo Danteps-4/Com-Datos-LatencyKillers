@@ -4,12 +4,12 @@
 
 **Grupo: Latency Killers**
 
-**Nombres**  
-_Dante Augsburger;_ 
-
 **Profesores**  
-_Santiago M. Henn;_ 
+- _Santiago M. Henn;_ 
+- _Facundo Oliva Cuneo_;
 
-### Información de los autores
- 
-- **_dante.augsburger@mi.unc.edu.ar_**
+**Integrantes**
+- **Dante Augsburger** **_dante.augsburger@mi.unc.edu.ar_**
+- **Martino Fioramonti** **_martino.fioramonti@mi.unc.edu.ar_**
+- **Tadeo Antonino** **_tadeo.antonino@mi.unc.edu.ar_**
+- **Ignacio Quintana** **_ignacio.agustin.quintana@mi.unc.edu.ar_**
