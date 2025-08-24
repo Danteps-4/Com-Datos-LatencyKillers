@@ -1,46 +1,25 @@
-# Repaso de fundamentos esenciales e introducción a Packet Tracer
+# TRABAJO PRÁCTICO 1 - Repaso de fundamentos esenciales e introducción a Packet Tracer
 
-**Dante Augsburger**  
-**Martino Fioramonti**
-**Tadeo Antonino**
+**Universidad Nacional de Córdoba**  
+**Comunicaciones de Datos**
+**Santiago M. Henn**  
+**Facundo Oliva Cuneo**  
+**25/08/2025**
+
+### Integrantes
 
 **Latency Killers**
 
-**Universidad Nacional de Córdoba**  
-**Comunicaciones de datos**
-**Santiago M. Henn**  
-**Facundo Oliva Cuneo**  
-**28/08/2025**
-
----
-
-### Información de los autores
-
-- **_dante.augsburger@mi.unc.edu.ar_**
-- **_martino.fioramonti@mi.unc.edu.ar_**
-- **tadeo.antonino@mi.unc.edu.ar\_**
-
----
-
-## Resumen
-
-Se repasan los fundamentos esenciales de las comunicaciones (ondas electromagnéticas, modulación/demodulación, señales analógicas y digitales) y se aplican en distintos ejercicios prácticos. Además, se utiliza el simulador Packet Tracer para configurar una red simple.
-
-**Palabras clave**: _Ondas electromagnéticas, modulación digital, señales discretas, BER, Packet Tracer_
-
----
+**Dante Augsburger** **_dante.augsburger@mi.unc.edu.ar_**
+**Martino Fioramonti** **_martino.fioramonti@mi.unc.edu.ar_**
+**Tadeo Antonino** **_tadeo.antonino@mi.unc.edu.ar_**
+**Ignacio Quintana** **_ignacio.agustin.quintana@mi.unc.edu.ar_**
 
 ## Introducción
 
 Se estudian conceptos como ondas electromagnéticas, señales continuas y discretas, y las técnicas de modulación y demodulación que permiten transmitir información a través de distintos medios.
 Se aborda la representación de la información digital, la transmisión mediante interfaces simples como UART, y las implicancias del uso de diferentes esquemas de modulación digital, evaluando su desempeño en términos de confiabilidad y tasa de error de bit.
 Finalmente, se realiza una práctica en el simulador Packet Tracer para configurar una red inalámbrica básica, interconectar dispositivos y analizar el alcance y las características de la señal. Esto permite vincular la teoría con escenarios concretos de redes de datos y comprender mejor la relación entre la capa física y el transporte de información.
-
----
-
-# Marco teórico / Modelo / Metodología
-
-## Ondas electromagnéticas, modulación/demodulación, señales de tiempo continuo y discreto
 
 ### Actividad 1
 
@@ -74,11 +53,9 @@ Como afecta a diferentes sistemas:
 - Cable coaxial: Mucho menos afectado, porque la señal viaja confinada en un medio físico.
 - Fibra óptica: No, porque la transmisión se realiza con pulsos de luz confinados en el núcleo de la fibra.
 
----
-
-## Señales digitales
-
 ### Actividad 2
+
+### Señales digitales
 
 Se quiere representar una transimisión serie, los bits se transmiten bit a bit a través de un único canal de comunicación. Es síncronica ya que se observa una señal de reloj compartida que coordina al transmisor y al receptor. La transmisión de bits se da en una sola dirección en ese instante.
 
@@ -99,8 +76,6 @@ es **en el centro de cada intervalo de bit**.
 
 - Si se midiera en los bordes (donde ocurre la transición), podría haber dudas por ruido o por la propia pendiente.
 - En cambio, en el punto medio de cada celda temporal el nivel ya está estabilizado en 0 o 1, lo cual garantiza una lectura confiable.
-
----
 
 ### Actividad 3
 
@@ -133,14 +108,14 @@ En términos de BER:
 
 En general, **PSK y FSK** ofrecen mejores prestaciones que ASK en términos de BER para canales ruidosos.
 
----
+### Actividad 4
 
-## Resultados
+La frecuencia de trabajo del router inalámbrico es de 2.437 GHz. Esta frecuencia pertenece a la región del espectro electromagnético de las microondas y opera en la banda de frecuencia de radio RF.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, mauris sit amet aliquet vestibulum, enim ante consectetur enim, vel sollicitudin odio risus vel libero. Integer eget ipsum sed eros luctus laoreet vel vel leo. Fusce ut dapibus nisl. Aliquam erat volutpat. Donec in elit non justo convallis vestibulum.
+En la siguiente imagen se puede ver como comprobamos la conexión inalámbrica entre la notebook y el router.
 
----
+![Grafico](ping.png)
 
-## Discusión y conclusiones
+En la siguiente imagen podemos observar como al colocar la notebook fuera de los límites de la red wifi se pierde la señal. Para ello primero conectamos la notebook a la red y luego la movimos por fuera de la oficina.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, mauris sit amet aliquet vestibulum, enim ante consectetur enim, vel sollicitudin odio risus vel libero. Integer eget ipsum sed eros luctus laoreet vel vel leo. Fusce ut dapibus nisl. Aliquam erat volutpat. Donec in elit non justo convallis vestibulum.
+![Grafico](testwifi.png)
