@@ -1,19 +1,22 @@
 # TRABAJO PRÁCTICO 1 - Repaso de fundamentos esenciales e introducción a Packet Tracer
 
-**Universidad Nacional de Córdoba**  
-**Comunicaciones de Datos**
-**Santiago M. Henn**  
-**Facundo Oliva Cuneo**  
-**25/08/2025**
+- **Universidad Nacional de Córdoba**
+- **Comunicaciones de Datos**
+- **25/08/2025**
+
+### Docentes
+
+- **Santiago M. Henn**
+- **Facundo Oliva Cuneo**
 
 ### Integrantes
 
 **Latency Killers**
 
-**Dante Augsburger** **_dante.augsburger@mi.unc.edu.ar_**
-**Martino Fioramonti** **_martino.fioramonti@mi.unc.edu.ar_**
-**Tadeo Antonino** **_tadeo.antonino@mi.unc.edu.ar_**
-**Ignacio Quintana** **_ignacio.agustin.quintana@mi.unc.edu.ar_**
+- **Dante Augsburger** **_dante.augsburger@mi.unc.edu.ar_**
+- **Martino Fioramonti** **_martino.fioramonti@mi.unc.edu.ar_**
+- **Tadeo Antonino** **_tadeo.antonino@mi.unc.edu.ar_**
+- **Ignacio Quintana** **_ignacio.agustin.quintana@mi.unc.edu.ar_**
 
 ## Introducción
 
