@@ -1,28 +1,79 @@
 # TRABAJO PRÁCTICO 1 - Repaso de fundamentos esenciales e introducción a Packet Tracer
 
+## Nombres
+
+- **Dante Augsburger**
+- **Martino Fioramonti**
+- **Tadeo Antonino**
+- **Ignacio Quintana**
+
+- **Latency Killers**
+
 - **Universidad Nacional de Córdoba**
 - **Comunicaciones de Datos**
-- **25/08/2025**
-
-### Docentes
-
 - **Santiago M. Henn**
 - **Facundo Oliva Cuneo**
+- **25/08/2025**
 
-### Integrantes
+### Información de los autores
 
-**Latency Killers**
+- **_dante.augsburger@mi.unc.edu.ar_**
+- **_martino.fioramonti@mi.unc.edu.ar_**
+- **_tadeo.antonino@mi.unc.edu.ar_**
+- **_ignacio.agustin.quintana@mi.unc.edu.ar_**
 
-- **Dante Augsburger** **_dante.augsburger@mi.unc.edu.ar_**
-- **Martino Fioramonti** **_martino.fioramonti@mi.unc.edu.ar_**
-- **Tadeo Antonino** **_tadeo.antonino@mi.unc.edu.ar_**
-- **Ignacio Quintana** **_ignacio.agustin.quintana@mi.unc.edu.ar_**
+---
+
+## Resumen
+
+En este trabajo se repasaron conceptos fundamentales de \*comunicaciones de datos, como ondas electromagnéticas, atenuación, transmisión digital y técnicas de modulación. Además, se aplicaron estos conocimientos en una práctica con **Packet Tracer**, donde se configuró una red inalámbrica, se analizaron las frecuencias de operación y el alcance de la señal, y se evaluó cómo factores como la distancia y los obstáculos afectan la conectividad. Esto permitió relacionar la teoría con situaciones reales y comprender mejor el funcionamiento de las redes y la transmisión de datos.
+
+Palabras clave: Ondas electromagnéticas, Modulación digital, Atenuación, Packet Tracer.
+
+---
 
 ## Introducción
 
 Se estudian conceptos como ondas electromagnéticas, señales continuas y discretas, y las técnicas de modulación y demodulación que permiten transmitir información a través de distintos medios.
 Se aborda la representación de la información digital, la transmisión mediante interfaces simples como UART, y las implicancias del uso de diferentes esquemas de modulación digital, evaluando su desempeño en términos de confiabilidad y tasa de error de bit.
 Finalmente, se realiza una práctica en el simulador Packet Tracer para configurar una red inalámbrica básica, interconectar dispositivos y analizar el alcance y las características de la señal. Esto permite vincular la teoría con escenarios concretos de redes de datos y comprender mejor la relación entre la capa física y el transporte de información.
+
+---
+
+## Marco Teórico
+
+Se repasaron conceptos fundamentales de las **comunicaciones de datos** que sirven como base para el trabajo práctico:
+
+- **Ondas electromagnéticas**: su propagación, longitud de onda y frecuencia, así como la relación con la velocidad de la luz.
+- **Atenuación y pérdidas**: disminución de la señal al propagarse, efectos de la distancia, los obstáculos y fenómenos como el _fading_.
+- **Señales digitales**: transmisión serie, diferencias entre comunicación síncrona y asíncrona, y codificación binaria.
+- **Modulación digital**: técnicas como ASK, FSK, PSK y QAM, con sus ventajas y limitaciones en términos de confiabilidad (BER) y eficiencia espectral.
+- **Redes inalámbricas**: bandas de frecuencia de uso común (2,4 GHz y 5 GHz), su alcance y limitaciones en entornos reales.
+
+---
+
+## Modelo
+
+El trabajo práctico se basó en un **modelo simplificado** de red de comunicaciones:
+
+- Representación de una transmisión digital sobre un canal.
+- Uso de una señal portadora modulada en amplitud (ASK) para ilustrar esquemas básicos de modulación.
+- Simulación en **Packet Tracer** de una red WiFi básica, como modelo reducido de lo que ocurre en entornos reales.
+- Análisis del alcance, la atenuación y la conectividad como factores centrales en el desempeño de la red.
+
+---
+
+## Metodología
+
+Para llevar a cabo el trabajo se siguió la siguiente secuencia:
+
+1. **Cálculo de parámetros de onda**: frecuencia, longitud de onda y ubicación en el espectro electromagnético.
+2. **Análisis de señales digitales**: conversión de caracteres a código ASCII/binario y estudio de la transmisión serie.
+3. **Identificación de técnicas de modulación digital**: representación de ASK y comparación con FSK, PSK y QAM.
+4. **Configuración de la red en Packet Tracer**: conexión inalámbrica entre router y notebook.
+5. **Verificación de la conectividad**: pruebas de ping, movimiento de dispositivos y pérdida de señal fuera del alcance en el entorno de Packet Tracer.
+
+---
 
 ### Actividad 1
 
@@ -113,12 +164,12 @@ En general, **PSK y FSK** ofrecen mejores prestaciones que ASK en términos de B
 
 ### Actividad 4
 
-La frecuencia de trabajo del router inalámbrico es de 2.437 GHz. Esta frecuencia pertenece a la región del espectro electromagnético de las microondas y opera en la banda de frecuencia de radio RF.
+El router configurado opera a una frecuencia de 2,437 GHz, la cual corresponde a la región del espectro electromagnético de las microondas, dentro de la banda ISM de 2,4 GHz. Este rango de frecuencias es ampliamente utilizado en aplicaciones de comunicación inalámbrica, ya que no requiere licencia y permite la implementación de redes WiFi domésticas y empresariales.
 
-En la siguiente imagen se puede ver como comprobamos la conexión inalámbrica entre la notebook y el router.
+Para verificar el correcto funcionamiento de la red, primero se conectó una notebook al router y se comprobó la conectividad mediante la ejecución de un ping, como se muestra en la siguiente imagen:
 
 ![Grafico](ping.png)
 
-En la siguiente imagen podemos observar como al colocar la notebook fuera de los límites de la red wifi se pierde la señal. Para ello primero conectamos la notebook a la red y luego la movimos por fuera de la oficina.
+Posteriormente, se analizó el efecto de la distancia en la señal. Al mover la notebook fuera de los límites de cobertura de la red, se observó la pérdida de conectividad, lo que refleja en el simulador el mismo comportamiento que ocurre en un entorno real: la señal se atenúa progresivamente hasta volverse insuficiente para mantener la comunicación.
 
 ![Grafico](testwifi.png)
