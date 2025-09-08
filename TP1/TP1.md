@@ -173,3 +173,7 @@ Para verificar el correcto funcionamiento de la red, primero se conectó una not
 Posteriormente, se analizó el efecto de la distancia en la señal. Al mover la notebook fuera de los límites de cobertura de la red, se observó la pérdida de conectividad, lo que refleja en el simulador el mismo comportamiento que ocurre en un entorno real: la señal se atenúa progresivamente hasta volverse insuficiente para mantener la comunicación.
 
 ![Grafico](testwifi.png)
+
+## Conclusión
+
+El trabajo permitió integrar los conceptos teóricos de comunicaciones de datos con su aplicación práctica en el simulador **Packet Tracer**. A partir del análisis de ondas electromagnéticas, atenuación, transmisión digital y técnicas de modulación, se comprendió cómo estos principios impactan directamente en el desempeño de las redes inalámbricas. Con la simulación conocimos las limitaciones reales en términos de alcance y confiabilidad de la señal, reforzando la importancia de la capa física en la transmisión de información.
