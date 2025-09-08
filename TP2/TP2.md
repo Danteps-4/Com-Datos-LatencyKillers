@@ -67,3 +67,53 @@ Actualmente, algunas aerolíneas permiten usar Wi-Fi o telefonía, pero a travé
 
 
 
+# Consigna 2 — Fenómeno físico #2
+
+### a) ¿Qué fenómeno muestra la figura? ¿Cuáles son sus características?
+La figura muestra *interferencia/ruido electromagnético impulsivo* que se *suma* a una señal de radio.  
+La antena transmite una onda “limpia”, pero un equipo eléctrico (taladro/rompedor) irradia *picos de ruido* y *distorsiona* un *tramo* de la señal. Luego, al cesar la fuente, la señal vuelve a recibirse “normal”.
+
+*Características principales (explicadas simple):*
+- *Momentáneo (impulsivo):* aparece en ráfagas cuando arranca o conmuta un aparato.
+- *No deseado:* no forma parte del mensaje; se superpone a la señal útil.
+- *De amplio espectro:* muchos equipos eléctricos emiten en varias frecuencias → pueden afectar distintos sistemas.
+- *Radiado o acoplado:* puede viajar por el aire (radiado) o meterse a través de cables cercanos (acoplamiento).
+- *Deforma la onda:* altera amplitud/fase en ese tramo (se ve “serrucho” o un bache).
+- *Baja la SNR localmente:* mientras dura el pulso, cae la relación señal-ruido y *suben los errores* (típicamente en *ráfagas*).
+- *Depende de potencia y cercanía:* cuanto más cerca y potente el equipo ruidoso, peor el efecto.
+- *Más evidente en inalámbrico:* al no haber blindaje físico, el receptor “escucha” todo lo que hay en el aire.
+
+---
+
+### b) ¿A qué transmisiones afecta más? ¿Cuáles son más resilientes?
+*Más afectados:*
+- *Enlaces inalámbricos* (celular, Wi-Fi, radio) que comparten el aire con otras fuentes; en *bandas congestionadas* como *2.4 GHz* el riesgo de choques es mayor.
+- *Modulaciones de alto orden* (p. ej., 64/256-QAM): son eficientes pero *exigen SNR alta*; el ruido impulsivo las rompe fácil.
+- *Cobre mal tendido o sin blindaje* (UTP cerca de motores/fuentes): capta EMI y sufre *diafonía* si corre en paralelo con otros cables.
+- *Sistemas sin corrección de errores* o sin *interleaving: el ruido impulsivo produce **errores en ráfaga* difíciles de recuperar.
+
+*Más resilientes:*
+- *Fibra óptica:* inmune a la interferencia electromagnética del entorno.
+- *Coaxial blindado* y *par trenzado de calidad* (buen trenzado/puesta a tierra): reducen el acoplamiento de ruido.
+- *Bandas menos saturadas* (p. ej., *5 GHz* frente a 2.4 GHz) y enlaces con *línea de vista clara*.
+- *Modulaciones más robustas* (BPSK/QPSK) o *OFDM* con *FEC* (corrección de errores) y *interleaving*: toleran mejor SNR baja y errores en ráfaga.
+- *MIMO/diversidad*: combinan varias trayectorias/antenas para “ganarle” a desvanecimientos e interferencias puntuales.
+
+> Nota práctica: el dibujo sugiere un enlace *inalámbrico* (antena → teléfono), así que ahí es donde más sentido tiene pensar esta interferencia.
+
+---
+
+### c) ¿Qué es la SNR? ¿Se relaciona con la BER del TP01?
+- *SNR (Signal-to-Noise Ratio)* = *Relación Señal/Ruido*: mide cuán fuerte es la señal útil frente al ruido.
+  - *Lineal:* SNR = P_señal / P_ruido
+  - *En dB:* SNR(dB) = 10 · log10(SNR_lineal)
+- *BER (Bit Error Rate)* = *Tasa de error de bit*: proporción de bits recibidos con error.
+
+*Relación clave (misma modulación/ancho de banda):*
+- *Mayor SNR ⇒ menor BER.* El receptor distingue mejor 1/0.
+- *Menor SNR ⇒ mayor BER.* Decisiones más confusas → más errores.
+- El *ruido impulsivo* de la figura *hunde la SNR por momentos, generando **errores en ráfaga*.  
+  *FEC + interleaving* ayudan a repartir esos errores en el tiempo y bajar la BER efectiva.
+- *Modulación importa:* esquemas “ambiciosos” (más bits por símbolo) *necesitan SNR más alta* para lograr la misma BER que esquemas “simples”.
+
+*Resumen en una línea:* si el ruido sube (o la señal baja), la *SNR cae* y la *BER sube*; técnicas de cableado, elección de banda, modulación y FEC son las herramientas para mantener la SNR alta y la BER baja.
