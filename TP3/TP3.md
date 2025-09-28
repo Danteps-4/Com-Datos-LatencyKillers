@@ -55,10 +55,67 @@ Palabras clave: IEEE 802.3, IEEE 802.11, Wi-Fi, fibra óptica, protocolos inalá
 
 ## Consigna 1
 
+## a) Estándares IEEE 802.3 y 802.11
 
-### a) IEEE 802.3 y IEEE 802.11
+- **IEEE 802.3 (Ethernet):**
+  - **Historia:** Publicado en 1983, define las redes cableadas Ethernet.
+  - **Campo de aplicación:** LAN cableadas. Usa tramas de datos sobre cable coaxial, par trenzado o fibra óptica.
+  - **Velocidades:** Desde 10 Mbps (Ethernet clásico) hasta más de 400 Gbps en versiones modernas.
+  - **Uso:** Conexión de computadoras, switches, routers en redes empresariales y del hogar.
 
-Estandares de
+- **IEEE 802.11 (Wi-Fi):**
+  - **Historia:** Publicado en 1997, define redes inalámbricas.
+  - **Campo de aplicación:** WLAN, permitiendo movilidad y conexión sin cables.
+  - **Velocidades:** Inicialmente 2 Mbps, hoy llega a decenas de Gbps.
+  - **Uso:** Conexión inalámbrica de PCs, smartphones, notebooks y cualquier otro dispositivo.
+
+---
+
+## b) Procedimiento para determinar la versión de 802.11 en uso
+
+Mediante la revisión de la red en una notebook windows, se observa que la red de la facultad utiliza 802.11ac (wi-fi 5).  
+Al ser una red abierta, no presenta cifrado en la capa de enlace.
+
+  1. Conectarse a la red.
+  2. Abrir consola.
+  3. Ejecutar:  
+
+     netsh wlan show interfaces
+
+  4. Revisar el campo Radio type:
+     - `802.11ac` por lo tanto es wi-fi 5  
+
+---
+
+## c) Compatibilidad entre protocolos y NIC
+
+Si una red wi-fi opera con un protocolo más nuevo y la NIC del dispositivo no lo soporta o no es compatible:
+
+* No podrá conectarse si el router solo usa ese protocolo.
+* Pero si el router es retrocompatible, ambos dispositivos negociarán un estándar común al que puedan conectarse.
+* Se termina sacrificando velocidad y eficiencia.
+
+---
+
+## d) Relación entre protocolo y seguridad
+
+Aunque Wi-Fi 5 soporta WPA2/WPA3, en este caso la red está configurada como abierta (sin seguridad).  
+Esto implica que todo el tráfico puede ser interceptado, ya que no existe cifrado a nivel de enlace. 
+
+La versión del protocolo determina velocidad y eficiencia, pero la seguridad depende de la configuración del AP.
+
+---
+
+## e) Cuadro comparativo Wi-Fi 5, 6 y 7
+
+| Característica     | Wi-Fi 5 (802.11ac)   | Wi-Fi 6 (802.11ax)              | Wi-Fi 7 (802.11be)           |
+| ------------------ | -------------------- | ------------------------------- | ---------------------------- |
+| **Versión IEEE**   | 802.11ac             | 802.11ax                        | 802.11be                     |
+| **Tasa máxima**    | ~3,5 Gbps (MU-MIMO)  | ~9,6 Gbps                       | ~46 Gbps                     |
+| **Bandas**         | 5 GHz                | 2,4 y 5 GHz (Wi-Fi 6E agrega 6) | 2,4 / 5 / 6 GHz              |
+| **Ancho de banda** | Hasta 160 MHz        | Hasta 160 MHz                   | Hasta 320 MHz                |
+| **Modulación**     | 256-QAM              | 1024-QAM                        | 4096-QAM                     |
+| **Seguridad**      | WPA2 / WPA3 opcional | WPA3 (recomendado)              | WPA3 (base, mejoras futuras) |
 
 ---
 
