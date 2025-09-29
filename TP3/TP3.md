@@ -227,7 +227,51 @@ En el gráfico siguiente se representan los protocolos en función de su **alcan
 
 ## Consigna 4
 
+El “estado del arte” se puede entender como una foto actual de lo qué se está usando hoy en día y cómo, en el mundo real y en la investigación, para resolver un problema. En redes significa: mirar qué tecnologías existen, cuáles son las más nuevas, qué limitaciones tienen y hacia dónde están yendo las mejoras.
 
+Hoy en día hay dos grandes formas de darle internet a un avión en pleno vuelo:
+
+### Air-to-Ground (A2G, aire-tierra)
+Este sistema funciona de manera similar a la conexión de un teléfono celular, pero en lugar de conectarse a torres a nivel del suelo, el avión se comunica con antenas terrestres diseñadas para apuntar hacia el cielo.
+
+**Características:**
+  - Latencia relativamente baja (los datos viajan directo a tierra, sin pasar por satélites).
+  - Velocidades decentes, parecidas a 4G/5G.
+
+**Limitaciones:**
+  - Solo sirve mientras el avión vuele sobre zonas con cobertura de torres.
+  - No funciona sobre océanos ni zonas remotas.
+  - El avión tiene que ir cambiando de torre (handover), como un celular cuando cambiás de antena al viajar en auto.
+
+### Satélite (Satcom)
+En este caso, el avión utiliza antenas para conectarse a satélites en el espacio. Estos satélites retransmiten la señal hacia estaciones en tierra, que luego la enlazan con internet.
+
+**Características:**
+   - Cobertura global: funciona incluso en medio del océano.
+   - Redes modernas (ej. Starlink) pueden dar decenas de Mbps por usuario.
+
+**Limitaciones:**
+  - Si es satélite geoestacionario, la latencia es alta (500 ms o más).
+  - El ancho de banda se comparte entre muchos usuarios, así que si hay mucha demanda se satura.
+  - El hardware a bordo es más complejo y caro (antenas que siguen al satélite).
+  - Costos altos, tanto para la aerolínea como para el pasajero.
+
+### Modelos híbridos (A2G + satélite)
+Algunos sistemas modernos combinan las dos tecnologías, utilizando A2G cuando hay cobertura terrestre y recurriendo al satélite en zonas sin infraestructura.
+
+**Características:**
+  - Ofrecen mejor continuidad del servicio.
+  - Permiten balancear el tráfico según disponibilidad y costo.
+
+**Limitaciones:**
+  - Mayor complejidad de gestión.
+  - Dependen de acuerdos de infraestructura tanto en tierra como en el espacio.
+
+
+Un articulo que puede ser de interes sobre este tema es el siguiente:
+[“A First Look at Starlink In-Flight Performance: An Intercontinental Empirical Study”](https://arxiv.org/html/2508.09839v1) (2025) analiza el rendimiento real de Starlink a bordo de aviones en vuelos intercontinentales. Mediante pruebas de velocidad, latencia y streaming, los autores encontraron que los pasajeros pueden alcanzar en promedio 64 Mbps de bajada y 24 Mbps de subida, con latencias variables según la estación terrestre y los enlaces entre satélites. Aunque el rendimiento es menor que en terminales fijas en tierra, los resultados muestran que Starlink puede ofrecer conectividad estable y suficiente para navegación, correo y hasta video en 4K durante el vuelo.
+
+En la mayoría de los aviones, el tráfico se divide en dos caminos distintos. Por un lado, el sistema de entretenimiento a bordo funciona con un servidor local instalado en el avión, que almacena películas, series y música. Cuando un pasajero reproduce una película, los datos no salen del avión, sino que viajan por la red interna Wi-Fi directamente desde ese servidor, sin ocupar ancho de banda externo. Por otro lado, el acceso a internet real (correo, redes sociales, navegación web) necesita salir del avión a través del enlace satelital o aire-tierra, el cual tiene costo y capacidad limitada, por eso suele ser un servicio pago.
 
 ---
 
