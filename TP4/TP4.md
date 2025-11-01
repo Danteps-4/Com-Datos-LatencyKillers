@@ -117,3 +117,167 @@ El **Tagging** es el proceso mediante el cual se **inserta la etiqueta 802.1Q** 
 
 - En un **enlace troncal (trunk)**, el switch **etiqueta (tag)** las tramas salientes con el **VLAN ID** para que el dispositivo receptor sepa a qué VLAN pertenece.  
 - En los **enlaces de acceso (access ports)**, las tramas **no van etiquetadas**, porque solo pertenecen a una VLAN.
+
+
+## 2) Implementación de la topología y configuración de VLANs en Packet Tracer
+
+### Objetivo general
+
+Implementar una red LAN compuesta por dos switches y dos computadoras, aplicando la creación de VLANs, configuración de puertos, asignación de IPs de gestión, contraseñas, encriptación y enlaces trunk.
+Finalmente, verificar la conectividad entre hosts de la misma VLAN y la correcta segmentación del tráfico.
+
+### Topología general
+
+La topología implementada en **Cisco Packet Tracer** está formada por:
+
+| Dispositivo | IP de gestión | VLAN | Descripción |
+|--------------|---------------|-------|--------------|
+| **SW1** | 192.168.99.11 | 99 (Management) | Switch principal |
+| **SW2** | 192.168.99.12 | 99 (Management) | Switch secundario |
+| **PC-A** | 192.168.10.3 | 10 (Laboratorio) | Host conectado a SW1 |
+| **PC-B** | 192.168.10.4 | 10 (Laboratorio) | Host conectado a SW2 |
+
+**Conexiones físicas (Copper Straight-Through):**
+
+*   SW1 Fa0/1 ↔ SW2 Fa0/1 → enlace _trunk_
+    
+*   SW1 Fa0/6 ↔ PC-A Fa0
+    
+*   SW2 Fa0/6 ↔ PC-B Fa0
+    
+![alt text](image.png)
+Topología final en Packet Tracer funcionando.
+
+### Configuración de los switches
+
+#### 🔹 a) Asignación de nombre y contraseñas
+
+```bash
+enable
+configure terminal
+hostname sw1
+enable secret trabajopractico4
+line console 0
+ password consolatp4
+ login
+exit
+line vty 0 15
+ password remototp4
+ login
+exit
+service password-encryption
+write memory
+```
+
+Estas configuraciones establecen los nombres de los switches y contraseñas seguras para el acceso local (console), remoto (vty) y privilegiado (enable secret).El comando service password-encryption protege las contraseñas en el archivo de configuración.
+
+#### 🔹 b) Configuración de las VLANs e IP de gestión
+
+```bash
+vlan 10
+ name Laboratorio
+vlan 20
+ name Bar
+vlan 99
+ name Management
+!
+interface vlan 99
+ ip address 192.168.99.11 255.255.255.0
+ no shutdown
+exit
+```
+
+Se crearon las VLANs requeridas y se configuró una **VLAN de administración (99)** para asignar la IP de gestión a los switches.
+
+#### 🔹 c) Desactivación de puertos no utilizados
+
+```bash
+interface range fastethernet0/2 - 5 , fastethernet0/7 - 24 , gigabitethernet0/1 - 2
+shutdown
+end
+```
+
+Desactivar puertos no utilizados mejora la seguridad física y lógica del switch, evitando conexiones no autorizadas.
+
+#### 🔹 d) Asignación de puertos a VLANs
+
+En **SW1 (PC-A)**:
+
+```bash
+interface fastethernet0/6
+ switchport mode access
+ switchport access vlan 10
+```
+
+En **SW2 (PC-B)**:
+
+```bash
+interface fastethernet0/6
+ switchport mode access
+ switchport access vlan 10
+```
+
+Los puertos conectados a las PCs se configuraron como _access ports_, pertenecientes a la VLAN 10 (“Laboratorio”), para permitir su comunicación interna.
+
+#### 🔹 e) Configuración del enlace trunk entre los switches
+
+```bash
+interface fastethernet0/1
+ switchport mode trunk
+ switchport trunk allowed vlan 1,10,20,99
+ no shutdown
+```
+
+El enlace _trunk_ entre sw1 y sw2 permite transportar simultáneamente el tráfico de múltiples VLANs, manteniendo la segmentación lógica a través del enlace físico compartido.
+
+#### 🔹 f) Configuración de IPs en las PCs
+
+**PC-A**
+
+```bash
+IP Address: 192.168.10.3
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.10.1
+```
+
+**PC-B**
+
+```bash
+IP Address: 192.168.10.4
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.10.1
+```
+
+![alt text](image-6.png)
+
+### Verificación y pruebas
+
+#### Ping entre PCs (VLAN 10)
+
+![alt text](image-1.png)
+
+Terminal de PC-A mostrando ping exitoso a PC-B.
+
+La comunicación entre las PCs confirma que las VLANs están correctamente configuradas, los enlaces _trunk_ activos y la segmentación lógica funcionando.
+
+#### Ping entre switches (VLAN 99)
+
+![alt text](image-2.png)
+CLI mostrando ping exitoso entre switches.
+
+Verifica la conectividad en la VLAN de administración (Management), garantizando acceso remoto y monitoreo centralizado.
+
+### Comprobaciones finales
+
+#### VLANs 10, 20 y 99 activas
+![alt text](image-3.png)
+
+#### Fa0/1 trunking VLANs 1,10,20,99
+![alt text](image-4.png)
+
+#### VLAN99 up/up con IP asignada
+![alt text](image-5.png)
+
+### Conclusión Consigna 2
+
+Se logró implementar y verificar una red LAN segmentada mediante VLANs, con administración separada y comunicación funcional entre hosts del mismo segmento.El uso de **VLANs, contraseñas encriptadas, trunking y desactivación de puertos no usados** permitió cumplir con todos los objetivos del trabajo práctico, demostrando una configuración segura, modular y escalable.
