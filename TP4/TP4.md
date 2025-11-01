@@ -118,6 +118,7 @@ El **Tagging** es el proceso mediante el cual se **inserta la etiqueta 802.1Q** 
 - En un **enlace troncal (trunk)**, el switch **etiqueta (tag)** las tramas salientes con el **VLAN ID** para que el dispositivo receptor sepa a qué VLAN pertenece.  
 - En los **enlaces de acceso (access ports)**, las tramas **no van etiquetadas**, porque solo pertenecen a una VLAN.
 
+---
 
 ## 2) Implementación de la topología y configuración de VLANs en Packet Tracer
 
@@ -125,6 +126,8 @@ El **Tagging** es el proceso mediante el cual se **inserta la etiqueta 802.1Q** 
 
 Implementar una red LAN compuesta por dos switches y dos computadoras, aplicando la creación de VLANs, configuración de puertos, asignación de IPs de gestión, contraseñas, encriptación y enlaces trunk.
 Finalmente, verificar la conectividad entre hosts de la misma VLAN y la correcta segmentación del tráfico.
+
+---
 
 ### Topología general
 
@@ -147,6 +150,8 @@ La topología implementada en **Cisco Packet Tracer** está formada por:
     
 ![alt text](image.png)
 Topología final en Packet Tracer funcionando.
+
+---
 
 ### Configuración de los switches
 
@@ -171,6 +176,8 @@ write memory
 
 Estas configuraciones establecen los nombres de los switches y contraseñas seguras para el acceso local (console), remoto (vty) y privilegiado (enable secret).El comando service password-encryption protege las contraseñas en el archivo de configuración.
 
+---
+
 #### 🔹 b) Configuración de las VLANs e IP de gestión
 
 ```bash
@@ -189,6 +196,8 @@ exit
 
 Se crearon las VLANs requeridas y se configuró una **VLAN de administración (99)** para asignar la IP de gestión a los switches.
 
+---
+
 #### 🔹 c) Desactivación de puertos no utilizados
 
 ```bash
@@ -198,6 +207,8 @@ end
 ```
 
 Desactivar puertos no utilizados mejora la seguridad física y lógica del switch, evitando conexiones no autorizadas.
+
+---
 
 #### 🔹 d) Asignación de puertos a VLANs
 
@@ -219,6 +230,8 @@ interface fastethernet0/6
 
 Los puertos conectados a las PCs se configuraron como _access ports_, pertenecientes a la VLAN 10 (“Laboratorio”), para permitir su comunicación interna.
 
+---
+
 #### 🔹 e) Configuración del enlace trunk entre los switches
 
 ```bash
@@ -229,6 +242,8 @@ interface fastethernet0/1
 ```
 
 El enlace _trunk_ entre sw1 y sw2 permite transportar simultáneamente el tráfico de múltiples VLANs, manteniendo la segmentación lógica a través del enlace físico compartido.
+
+---
 
 #### 🔹 f) Configuración de IPs en las PCs
 
@@ -250,6 +265,8 @@ Default Gateway: 192.168.10.1
 
 ![alt text](image-6.png)
 
+---
+
 ### Verificación y pruebas
 
 #### Ping entre PCs (VLAN 10)
@@ -267,6 +284,8 @@ CLI mostrando ping exitoso entre switches.
 
 Verifica la conectividad en la VLAN de administración (Management), garantizando acceso remoto y monitoreo centralizado.
 
+---
+
 ### Comprobaciones finales
 
 #### VLANs 10, 20 y 99 activas
@@ -278,6 +297,7 @@ Verifica la conectividad en la VLAN de administración (Management), garantizand
 #### VLAN99 up/up con IP asignada
 ![alt text](image-5.png)
 
+--- 
 ### Conclusión Consigna 2
 
 Se logró implementar y verificar una red LAN segmentada mediante VLANs, con administración separada y comunicación funcional entre hosts del mismo segmento.El uso de **VLANs, contraseñas encriptadas, trunking y desactivación de puertos no usados** permitió cumplir con todos los objetivos del trabajo práctico, demostrando una configuración segura, modular y escalable.
