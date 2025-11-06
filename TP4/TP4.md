@@ -301,3 +301,38 @@ Verifica la conectividad en la VLAN de administración (Management), garantizand
 ### Conclusión Consigna 2
 
 Se logró implementar y verificar una red LAN segmentada mediante VLANs, con administración separada y comunicación funcional entre hosts del mismo segmento.El uso de **VLANs, contraseñas encriptadas, trunking y desactivación de puertos no usados** permitió cumplir con todos los objetivos del trabajo práctico, demostrando una configuración segura, modular y escalable.
+
+
+## 3)
+Primero configure la topologia en el packet trace, puse 2 notebooks para clase bussines y para turistas, y una para administracion.
+Todas estaban conectadas a un switch,
+Turistas => f0/2 y f0/3
+Bussines => f0/4 y f0/5
+Administracion => f0/6
+Server => f0/7
+
+Luego en base a esas conexiones primero configure el switch. Cree las vlans correspondientes:
+10 => Turistas
+20 => Bussines
+99 => Admnis
+Y luego asigne los puertos a cada vlans segun correspondia 
+
+Turistas => f0/2 y f0/3 => VLAN 10
+Bussines => f0/4 y f0/5 => VLAN 20
+Administracion => f0/6 => VLAN 99
+Server => f0/7 VLAN 99
+
+Luego pase a configurar el router, donde segui los siguientes comandos que estan en las imagenes. Son los mismo que nos daba la actividad practicamente
+
+Verificamos que el DHCP este bien configurado, para ello me fui a cada PC, en el apartado de IP Configuration y en el DHCP vi que se le asigno la IP con el rango correspondiente a cada PC. En las imagenes IP_clase, se ve como esta asignada cada una
+
+
+
+TEST_5: Al principio no funcionaba el ping, porque no habia configurado que el isp devolviera algo simulado cuando se hiciera ping.
+Cuando lo configure deje mal algo que hizo que turistas tuviera acceso a internet. tuve que volver a configurar la parte de denegar acceso a internet en el router aircraft a la vlan10 (turistas)
+
+
+
+Conclusion:
+Fue divertido y entretenido hacer una implementacion de este ejemplo, sobre todo porque es algo real. Nos permitio entender bastante mejor el funcionamiento de las VLANs y el uso que le podemos dar en la vida cotidiana. 
+Nos costo un poco al principio, sobre todo porque en un inicio parecia estar todo bien, pero luego nos dimos cuenta que en algun punto le dimos acceso a internet a los turistas por error. Rastrear el error nos llevo su tiempo, pero pudimos encontrarlo.
