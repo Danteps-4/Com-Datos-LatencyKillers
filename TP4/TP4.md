@@ -205,7 +205,7 @@ Mask: 255.255.255.0
 Gateway: 192.168.10.1
 ```
 
-![CfgIPs](image6.png)
+![CfgIPs](image-6.png)
 
 
 ---
@@ -213,13 +213,13 @@ Gateway: 192.168.10.1
 ### Verificación de conectividad
 
 #### Ping entre PCs (VLAN 10)
-![Ping entre PCs](image1.png)
+![Ping entre PCs](image-1.png)
 
 
 La comunicación confirma que las VLANs y enlaces trunk están configurados correctamente.
 
 #### Ping entre switches (VLAN 99)
-![Ping entre Sw](image2.png)
+![Ping entre Sw](image-2.png)
 
 Verifica la conectividad de la VLAN de administración.
 
@@ -228,15 +228,15 @@ Verifica la conectividad de la VLAN de administración.
 ### Comprobaciones finales
 
 #### VLANs 10, 20 y 99 activas
-![CfgIPs](image3.png)
+![CfgIPs](image-3.png)
 
 
 #### Fa0/1 trunking VLANs 1,10,20,99
-![CfgIPs](image4.png)
+![CfgIPs](image-4.png)
 
 
 #### VLAN99 up/up con IP asignada
-![CfgIPs](image5.png)
+![CfgIPs](image-5.png)
 
 
 ---
