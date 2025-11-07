@@ -1,161 +1,109 @@
-# TRABAJO PRÁCTICO N°3
+# TRABAJO PRÁCTICO N°4
 
-  
 ## Universidad Nacional de Córdoba
 
-**Carrera:** Ingeniería en Computación
-
-**Cátedra:** Comunicaciones de Datos
-
-**Docentes:** Santiago M. Henn — Facundo Oliva Cuneo
-
-**Fecha de entrega:** 22/09/2025
+**Carrera:** Ingeniería en Computación  
+**Cátedra:** Comunicaciones de Datos  
+**Docentes:** Santiago M. Henn — Facundo Oliva Cuneo  
+**Fecha de entrega:** 03/11/2025  
 
 ---
 
 ## Integrantes (Grupo *Latency Killers*)
 
-  
-
--  **Dante Augsburger**
-
-📧 *dante.augsburger@mi.unc.edu.ar*
-
--  **Martino Fioramonti**
-
-📧 *martino.fioramonti@mi.unc.edu.ar*
-
--  **Tadeo Antonino**
-
-📧 *tadeo.antonino@mi.unc.edu.ar*
-
--  **Ignacio Quintana**
-
-📧 *ignacio.agustin.quintana@mi.unc.edu.ar*
+- **Dante Augsburger** — *dante.augsburger@mi.unc.edu.ar*  
+- **Martino Fioramonti** — *martino.fioramonti@mi.unc.edu.ar*  
+- **Tadeo Antonino** — *tadeo.antonino@mi.unc.edu.ar*  
+- **Ignacio Quintana** — *ignacio.agustin.quintana@mi.unc.edu.ar*  
 
 ---
-
 
 ## Resumen
 
-HACER RESUMEN
+En este trabajo práctico se abordó la implementación de redes locales con segmentación mediante VLANs, configuración de switches y routers Cisco, y aplicación de conceptos como NAT, ACLs y DHCP.  
+El objetivo fue comprender los métodos de acceso al medio, los estándares IEEE 802.3 y 802.11, y la creación de redes virtuales VLAN para mejorar el rendimiento, la seguridad y la administración.
 
-Palabras clave:
+**Palabras clave:** VLAN, IEEE 802.1Q, Trunking, NAT, ACL, DHCP.
 
 ---
-
 
 ## Introducción
 
-HACER INTRO 
+Las redes de computadoras permiten la interconexión de dispositivos para compartir recursos e información. En el contexto de las redes locales (LAN), la segmentación mediante VLANs posibilita dividir lógicamente una red física, optimizando su administración y seguridad.  
+Este trabajo práctico tuvo como propósito aplicar los conocimientos teóricos en una simulación dentro de Cisco Packet Tracer, configurando dispositivos de red, VLANs, enlaces trunk, y verificando conectividad mediante comandos de diagnóstico.
 
 ---
 
-
-## Consigna 1
-
-## Primera Parte: Capas de Acceso en Redes Locales, Protocolos y Fundamentos
-
-## 1) Alcance de Redes y Virtualización
+## Consigna 1 — Capas de Acceso en Redes Locales, Protocolos y Fundamentos
 
 ### a) Clasificación de las redes según su alcance
 
 Las redes se clasifican según su **cobertura geográfica** y **alcance físico**.  
-A continuación se detallan los principales tipos:
 
 | Tipo de red | Acrónimo | Alcance aproximado | Características principales |
 |--------------|-----------|--------------------|------------------------------|
 | **Personal Area Network** | **PAN** | Hasta unos pocos metros | Conecta dispositivos personales (celular, auriculares Bluetooth, smartwatch). Baja potencia y corto alcance. |
-| **Local Area Network** | **LAN** | Hasta 1 km | Red de área local. Conecta computadoras y dispositivos en una misma ubicación (hogar, oficina, escuela). Alta velocidad y bajo retardo. |
-| **Metropolitan Area Network** | **MAN** | Hasta decenas de km | Interconecta varias LAN dentro de una ciudad o campus. Usada por proveedores o instituciones grandes. |
-| **Wide Area Network** | **WAN** | De cientos a miles de km | Conecta redes a nivel nacional o internacional (por ejemplo, Internet). Utiliza enlaces de larga distancia (fibra óptica, satélite, etc.). |
-| **Storage Area Network** | **SAN** | Variable (LAN o mayor) | Red dedicada al almacenamiento de datos. Alta velocidad y baja latencia para servidores. |
-| **Virtual Local Area Network** | **VLAN** | Virtual | Subdivisión lógica dentro de una LAN física. Aísla el tráfico de distintos grupos sin requerir hardware adicional. |
+| **Local Area Network** | **LAN** | Hasta 1 km | Red de área local. Conecta computadoras y dispositivos en una misma ubicación. Alta velocidad y bajo retardo. |
+| **Metropolitan Area Network** | **MAN** | Hasta decenas de km | Interconecta varias LAN dentro de una ciudad o campus. |
+| **Wide Area Network** | **WAN** | De cientos a miles de km | Conecta redes a nivel nacional o internacional (Internet). |
+| **Storage Area Network** | **SAN** | Variable | Red dedicada al almacenamiento de datos. Alta velocidad y baja latencia. |
+| **Virtual Local Area Network** | **VLAN** | Virtual | Subdivisión lógica dentro de una LAN física. |
 
-📘 **En la figura correspondiente:**  
-PAN → más chico · LAN → intermedio · MAN → regional · WAN → más grande
 
 ---
 
 ### b) ¿Qué es una VLAN? ¿Cómo se clasifican?
 
-Una **VLAN (Virtual Local Area Network)** es una **red local virtual** que permite **dividir lógicamente una red física** en varios segmentos independientes.  
-Cada VLAN funciona como si fuera una red separada, aunque los dispositivos estén conectados al mismo switch físico.
+Una **VLAN (Virtual Local Area Network)** permite **dividir lógicamente una red física** en varios segmentos independientes. Cada VLAN funciona como una red separada, mejorando el rendimiento y la seguridad.
 
-**Ventajas principales:**
-- Segmentación del tráfico (mejor rendimiento).  
-- Mayor seguridad (aislamiento entre grupos).  
-- Administración flexible (sin recablear físicamente).
+**Tipos de VLAN:**
 
-**Clasificación de las VLANs:**
-
-| Tipo de VLAN | Descripción |
-|---------------|-------------|
-| **VLAN por puerto (estática)** | Se asigna manualmente cada puerto del switch a una VLAN. Es la más común. |
-| **VLAN dinámica** | Los puertos se asignan automáticamente según la dirección MAC, usuario o protocolo, usando un servidor VMPS. |
-| **VLAN por protocolo** | Se agrupan los dispositivos según el protocolo de capa 3 utilizado (por ejemplo, IPv4, IPv6, IPX). |
-| **VLAN por dirección MAC** | Se asignan dispositivos a VLANs según su dirección física (MAC). |
+| Tipo | Descripción |
+|------|--------------|
+| **Por puerto (estática)** | Cada puerto se asigna manualmente a una VLAN. |
+| **Dinámica** | Asignación automática según MAC o usuario mediante servidor VMPS. |
+| **Por protocolo** | Agrupación por protocolo de capa 3 (IPv4, IPv6). |
+| **Por dirección MAC** | Asociación directa por dirección física. |
 
 ---
 
 ### c) Protocolo IEEE 802.1Q
 
-El estándar **IEEE 802.1Q** define el **mecanismo de etiquetado (tagging)** que permite identificar a qué VLAN pertenece cada trama Ethernet, es decir, IEEE 802.1Q define cómo se marcan las tramas para mantener la separación lógica de VLANs dentro de una misma infraestructura física.  
-Esto permite que múltiples VLANs viajen sobre un **único enlace físico** (por ejemplo, entre dos switches o entre un switch y un router).
-
-**Características principales:**
-- Añade una **etiqueta de 4 bytes** dentro de la trama Ethernet original.  
-- Esta etiqueta contiene el **VLAN ID (VID)**, que identifica la VLAN (valor entre 1 y 4094).  
-- Permite el **trunking**, es decir, el transporte simultáneo de varias VLANs por un mismo enlace.
-
+El estándar **IEEE 802.1Q** define el mecanismo de **etiquetado (tagging)** de tramas Ethernet que permite identificar a qué VLAN pertenece cada paquete.  
+Agrega una etiqueta de 4 bytes a la trama Ethernet original con el **VLAN ID (VID)**, habilitando el transporte de múltiples VLANs por un único enlace físico (_trunking_).
 
 ---
 
 ### d) ¿Qué es el *Tagging*?
 
-El **Tagging** es el proceso mediante el cual se **inserta la etiqueta 802.1Q** en la trama Ethernet para identificar su VLAN de origen.
-
-- En un **enlace troncal (trunk)**, el switch **etiqueta (tag)** las tramas salientes con el **VLAN ID** para que el dispositivo receptor sepa a qué VLAN pertenece.  
-- En los **enlaces de acceso (access ports)**, las tramas **no van etiquetadas**, porque solo pertenecen a una VLAN.
-
----
-
-## 2) Implementación de la topología y configuración de VLANs en Packet Tracer
-
-### Objetivo general
-
-Implementar una red LAN compuesta por dos switches y dos computadoras, aplicando la creación de VLANs, configuración de puertos, asignación de IPs de gestión, contraseñas, encriptación y enlaces trunk.
-Finalmente, verificar la conectividad entre hosts de la misma VLAN y la correcta segmentación del tráfico.
+El **Tagging** consiste en insertar la etiqueta 802.1Q en la trama Ethernet para indicar la VLAN de origen.  
+- En **enlaces trunk**, las tramas se etiquetan.  
+- En **enlaces access**, las tramas se envían sin etiquetas porque pertenecen a una sola VLAN.
 
 ---
+
+## Consigna 2 — Implementación de VLANs en Packet Tracer
 
 ### Topología general
 
-La topología implementada en **Cisco Packet Tracer** está formada por:
+La red consta de dos switches (SW1 y SW2) y dos computadoras (PC-A y PC-B) conectadas por un enlace trunk.  
+Cada switch cuenta con una VLAN de gestión y VLANs de usuario.
 
-| Dispositivo | IP de gestión | VLAN | Descripción |
-|--------------|---------------|-------|--------------|
+| Dispositivo | IP | VLAN | Descripción |
+|--------------|----|------|--------------|
 | **SW1** | 192.168.99.11 | 99 (Management) | Switch principal |
 | **SW2** | 192.168.99.12 | 99 (Management) | Switch secundario |
-| **PC-A** | 192.168.10.3 | 10 (Laboratorio) | Host conectado a SW1 |
-| **PC-B** | 192.168.10.4 | 10 (Laboratorio) | Host conectado a SW2 |
+| **PC-A** | 192.168.10.3 | 10 (Laboratorio) | Host en SW1 |
+| **PC-B** | 192.168.10.4 | 10 (Laboratorio) | Host en SW2 |
 
-**Conexiones físicas (Copper Straight-Through):**
+![Topología final](image.png)
 
-*   SW1 Fa0/1 ↔ SW2 Fa0/1 → enlace _trunk_
-    
-*   SW1 Fa0/6 ↔ PC-A Fa0
-    
-*   SW2 Fa0/6 ↔ PC-B Fa0
-    
-![alt text](image.png)
-Topología final en Packet Tracer funcionando.
 
 ---
 
 ### Configuración de los switches
 
-#### 🔹 a) Asignación de nombre y contraseñas
+#### a) Asignación de nombre y contraseñas
 
 ```bash
 enable
@@ -174,11 +122,11 @@ service password-encryption
 write memory
 ```
 
-Estas configuraciones establecen los nombres de los switches y contraseñas seguras para el acceso local (console), remoto (vty) y privilegiado (enable secret).El comando service password-encryption protege las contraseñas en el archivo de configuración.
+Configura el nombre del dispositivo y contraseñas para el acceso local y remoto, protegiéndolas con encriptación.
 
 ---
 
-#### 🔹 b) Configuración de las VLANs e IP de gestión
+#### b) Creación de VLANs e IP de gestión
 
 ```bash
 vlan 10
@@ -194,11 +142,11 @@ interface vlan 99
 exit
 ```
 
-Se crearon las VLANs requeridas y se configuró una **VLAN de administración (99)** para asignar la IP de gestión a los switches.
+Se configuró la **VLAN 99** como VLAN de administración, permitiendo la gestión remota del switch.
 
 ---
 
-#### 🔹 c) Desactivación de puertos no utilizados
+#### c) Desactivación de puertos no utilizados
 
 ```bash
 interface range fastethernet0/2 - 5 , fastethernet0/7 - 24 , gigabitethernet0/1 - 2
@@ -206,33 +154,29 @@ shutdown
 end
 ```
 
-Desactivar puertos no utilizados mejora la seguridad física y lógica del switch, evitando conexiones no autorizadas.
+Desactivar puertos inactivos mejora la seguridad física y lógica del switch.
 
 ---
 
-#### 🔹 d) Asignación de puertos a VLANs
+#### d) Asignación de puertos a VLANs
 
-En **SW1 (PC-A)**:
-
+**SW1 (PC-A)**  
 ```bash
 interface fastethernet0/6
  switchport mode access
  switchport access vlan 10
 ```
 
-En **SW2 (PC-B)**:
-
+**SW2 (PC-B)**  
 ```bash
 interface fastethernet0/6
  switchport mode access
  switchport access vlan 10
 ```
 
-Los puertos conectados a las PCs se configuraron como _access ports_, pertenecientes a la VLAN 10 (“Laboratorio”), para permitir su comunicación interna.
-
 ---
 
-#### 🔹 e) Configuración del enlace trunk entre los switches
+#### e) Configuración del enlace trunk
 
 ```bash
 interface fastethernet0/1
@@ -241,98 +185,151 @@ interface fastethernet0/1
  no shutdown
 ```
 
-El enlace _trunk_ entre sw1 y sw2 permite transportar simultáneamente el tráfico de múltiples VLANs, manteniendo la segmentación lógica a través del enlace físico compartido.
+Permite el transporte simultáneo de tráfico de varias VLANs entre switches.
 
 ---
 
-#### 🔹 f) Configuración de IPs en las PCs
+#### f) Configuración de IPs en las PCs
 
-**PC-A**
-
-```bash
-IP Address: 192.168.10.3
-Subnet Mask: 255.255.255.0
-Default Gateway: 192.168.10.1
+**PC-A**  
+```
+IP: 192.168.10.3
+Mask: 255.255.255.0
+Gateway: 192.168.10.1
 ```
 
-**PC-B**
-
-```bash
-IP Address: 192.168.10.4
-Subnet Mask: 255.255.255.0
-Default Gateway: 192.168.10.1
+**PC-B**  
+```
+IP: 192.168.10.4
+Mask: 255.255.255.0
+Gateway: 192.168.10.1
 ```
 
-![alt text](image-6.png)
+![CfgIPs](image6.png)
+
 
 ---
 
-### Verificación y pruebas
+### Verificación de conectividad
 
 #### Ping entre PCs (VLAN 10)
+![Ping entre PCs](image1.png)
 
-![alt text](image-1.png)
 
-Terminal de PC-A mostrando ping exitoso a PC-B.
-
-La comunicación entre las PCs confirma que las VLANs están correctamente configuradas, los enlaces _trunk_ activos y la segmentación lógica funcionando.
+La comunicación confirma que las VLANs y enlaces trunk están configurados correctamente.
 
 #### Ping entre switches (VLAN 99)
+![Ping entre Sw](image2.png)
 
-![alt text](image-2.png)
-CLI mostrando ping exitoso entre switches.
-
-Verifica la conectividad en la VLAN de administración (Management), garantizando acceso remoto y monitoreo centralizado.
+Verifica la conectividad de la VLAN de administración.
 
 ---
 
 ### Comprobaciones finales
 
 #### VLANs 10, 20 y 99 activas
-![alt text](image-3.png)
+![CfgIPs](image3.png)
+
 
 #### Fa0/1 trunking VLANs 1,10,20,99
-![alt text](image-4.png)
+![CfgIPs](image4.png)
+
 
 #### VLAN99 up/up con IP asignada
-![alt text](image-5.png)
-
---- 
-### Conclusión Consigna 2
-
-Se logró implementar y verificar una red LAN segmentada mediante VLANs, con administración separada y comunicación funcional entre hosts del mismo segmento.El uso de **VLANs, contraseñas encriptadas, trunking y desactivación de puertos no usados** permitió cumplir con todos los objetivos del trabajo práctico, demostrando una configuración segura, modular y escalable.
+![CfgIPs](image5.png)
 
 
-## 3)
-Primero configure la topologia en el packet trace, puse 2 notebooks para clase bussines y para turistas, y una para administracion.
-Todas estaban conectadas a un switch,
-Turistas => f0/2 y f0/3
-Bussines => f0/4 y f0/5
-Administracion => f0/6
-Server => f0/7
+---
 
-Luego en base a esas conexiones primero configure el switch. Cree las vlans correspondientes:
-10 => Turistas
-20 => Bussines
-99 => Admnis
-Y luego asigne los puertos a cada vlans segun correspondia 
+### Conclusión — Consigna 2
 
-Turistas => f0/2 y f0/3 => VLAN 10
-Bussines => f0/4 y f0/5 => VLAN 20
-Administracion => f0/6 => VLAN 99
-Server => f0/7 VLAN 99
+Se logró implementar y verificar una red LAN segmentada mediante VLANs con una VLAN de administración independiente.  
+El uso de contraseñas cifradas, enlaces trunk y desactivación de puertos no utilizados permitió cumplir con todos los objetivos del trabajo, obteniendo una configuración segura, modular y escalable.
 
-Luego pase a configurar el router, donde segui los siguientes comandos que estan en las imagenes. Son los mismo que nos daba la actividad practicamente
+---
 
-Verificamos que el DHCP este bien configurado, para ello me fui a cada PC, en el apartado de IP Configuration y en el DHCP vi que se le asigno la IP con el rango correspondiente a cada PC. En las imagenes IP_clase, se ve como esta asignada cada una
+## Consigna 3 — Simulación de red a bordo de una aeronave
 
+### Descripción general
 
+Se diseñó una topología que representa la red interna de una aeronave, con tres segmentos de usuarios:  
+- **Turista:** acceso solo al servidor local.  
+- **Business:** acceso al servidor local e Internet.  
+- **Administración:** acceso total.  
 
-TEST_5: Al principio no funcionaba el ping, porque no habia configurado que el isp devolviera algo simulado cuando se hiciera ping.
-Cuando lo configure deje mal algo que hizo que turistas tuviera acceso a internet. tuve que volver a configurar la parte de denegar acceso a internet en el router aircraft a la vlan10 (turistas)
+![alt text](consigna3/topologia.jpg)
 
+Cada clase fue implementada como una VLAN:
 
+| VLAN | Nombre | Red | Gateway | Acceso |
+|------|---------|-----|----------|---------|
+| 10 | Turista | 10.10.10.0/24 | 10.10.10.1 | Solo servidor local |
+| 20 | Business | 10.10.20.0/24 | 10.10.20.1 | Servidor + Internet |
+| 99 | Administración | 10.10.99.0/24 | 10.10.99.1 | Acceso total |
 
-Conclusion:
+---
+
+### Configuración del switch
+
+Se crearon las VLANs y se asignaron los puertos:
+
+| VLAN | Puertos |
+|------|----------|
+| 10 (Turista) | f0/2, f0/3 |
+| 20 (Business) | f0/4, f0/5 |
+| 99 (Administración) | f0/6 |
+| 99 (Server) | f0/7 |
+
+![alt text](consigna3/ConfiguroPuertosSwitchVLANS.png)
+
+---
+
+![alt text](consigna3/VLANS-SWITCH.png)
+
+---
+
+### Configuración del router (Aircraft)
+
+Se configuraron subinterfaces, DHCP, NAT y ACLs para controlar el acceso a Internet según la VLAN.
+
+![alt text](consigna3/ConfiguracionRouter.png)
+
+Durante la verificación inicial, los pings desde VLAN10 (Turista) funcionaban hacia Internet por error.  
+El problema se debió a una regla de ACL mal aplicada, que fue corregida negando tráfico saliente desde esa red.
+
+---
+
+### Tests realizados
+
+#### Ping al servidor de entretenimiento
+
+![alt text](consigna3/TEST_1.png)
+
+#### Acceso HTTP a servidor local (turista)
+
+![alt text](consigna3/TEST_2.png)
+
+#### Ping a Internet
+
+![alt text](consigna3/TEST_3.png)
+
+#### Acceso HTTP a servidor local (business)
+
+![alt text](consigna3/TEST_4.png)
+
+#### Ping a Internet (ej:8.8.8.8)
+
+![alt text](consigna3/TEST_5.png)
+
+#### Ping entre Admin y todos
+
+![alt text](consigna3/TEST_6.png)
+
+### Conclusión general
+
 Fue divertido y entretenido hacer una implementacion de este ejemplo, sobre todo porque es algo real. Nos permitio entender bastante mejor el funcionamiento de las VLANs y el uso que le podemos dar en la vida cotidiana. 
-Nos costo un poco al principio, sobre todo porque en un inicio parecia estar todo bien, pero luego nos dimos cuenta que en algun punto le dimos acceso a internet a los turistas por error. Rastrear el error nos llevo su tiempo, pero pudimos encontrarlo.
+Nos costo un poco al principio, sobre todo porque en un inicio parecia estar todo bien, pero luego nos dimos cuenta que en algun punto le dimos acceso a internet a los turistas por error. Rastrear el error nos llevo su tiempo, pero pudimos encontrarlo y corregirlo.
+
+---
+
+**Fin del Informe — Trabajo Práctico N°4**
