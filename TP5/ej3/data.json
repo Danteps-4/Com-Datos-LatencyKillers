@@ -2,393 +2,393 @@
   {
     "tipoSensor": "temperatura",
     "sala": "sala1",
-    "valor": 13,
-    "timestamp": "2025-11-19T02:07:01.596Z",
+    "valor": 4,
+    "timestamp": "2025-11-19T22:21:13.898Z",
     "topic": "lan/sala1/sensor/temp"
   },
   {
     "tipoSensor": "humedad",
-    "sala": "sala2",
-    "valor": 11,
-    "timestamp": "2025-11-19T02:07:01.600Z",
-    "topic": "lan/sala2/sensor/hum"
-  },
-  {
-    "tipoSensor": "humedad",
     "sala": "sala1",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:01.602Z",
+    "valor": 26,
+    "timestamp": "2025-11-19T22:21:13.899Z",
     "topic": "lan/sala1/sensor/hum"
   },
   {
-    "tipoSensor": "temperatura",
+    "tipoSensor": "humedad",
     "sala": "sala2",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:01.607Z",
-    "topic": "lan/sala2/sensor/temp"
-  },
-  {
-    "tipoSensor": "temperatura",
-    "sala": "sala1",
-    "valor": 13,
-    "timestamp": "2025-11-19T02:07:02.593Z",
-    "topic": "lan/sala1/sensor/temp"
+    "valor": 22,
+    "timestamp": "2025-11-19T22:21:13.904Z",
+    "topic": "lan/sala2/sensor/hum"
   },
   {
     "tipoSensor": "temperatura",
     "sala": "sala2",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:02.598Z",
+    "valor": 16,
+    "timestamp": "2025-11-19T22:21:13.910Z",
     "topic": "lan/sala2/sensor/temp"
   },
   {
     "tipoSensor": "humedad",
     "sala": "sala1",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:02.601Z",
-    "topic": "lan/sala1/sensor/hum"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala2",
-    "valor": 11,
-    "timestamp": "2025-11-19T02:07:02.605Z",
-    "topic": "lan/sala2/sensor/hum"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala2",
-    "valor": 11,
-    "timestamp": "2025-11-19T02:07:03.598Z",
-    "topic": "lan/sala2/sensor/hum"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala1",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:03.602Z",
-    "topic": "lan/sala1/sensor/hum"
-  },
-  {
-    "tipoSensor": "temperatura",
-    "sala": "sala2",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:03.607Z",
-    "topic": "lan/sala2/sensor/temp"
-  },
-  {
-    "tipoSensor": "temperatura",
-    "sala": "sala1",
-    "valor": 13,
-    "timestamp": "2025-11-19T02:07:03.610Z",
-    "topic": "lan/sala1/sensor/temp"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala2",
-    "valor": 11,
-    "timestamp": "2025-11-19T02:07:04.605Z",
-    "topic": "lan/sala2/sensor/hum"
-  },
-  {
-    "tipoSensor": "temperatura",
-    "sala": "sala1",
-    "valor": 13,
-    "timestamp": "2025-11-19T02:07:04.609Z",
-    "topic": "lan/sala1/sensor/temp"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala1",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:04.613Z",
-    "topic": "lan/sala1/sensor/hum"
-  },
-  {
-    "tipoSensor": "temperatura",
-    "sala": "sala2",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:04.617Z",
-    "topic": "lan/sala2/sensor/temp"
-  },
-  {
-    "tipoSensor": "temperatura",
-    "sala": "sala1",
-    "valor": 13,
-    "timestamp": "2025-11-19T02:07:05.614Z",
-    "topic": "lan/sala1/sensor/temp"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala1",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:05.618Z",
-    "topic": "lan/sala1/sensor/hum"
-  },
-  {
-    "tipoSensor": "temperatura",
-    "sala": "sala2",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:05.622Z",
-    "topic": "lan/sala2/sensor/temp"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala2",
-    "valor": 11,
-    "timestamp": "2025-11-19T02:07:05.626Z",
-    "topic": "lan/sala2/sensor/hum"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala1",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:06.618Z",
-    "topic": "lan/sala1/sensor/hum"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala2",
-    "valor": 11,
-    "timestamp": "2025-11-19T02:07:06.622Z",
-    "topic": "lan/sala2/sensor/hum"
-  },
-  {
-    "tipoSensor": "temperatura",
-    "sala": "sala2",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:06.627Z",
-    "topic": "lan/sala2/sensor/temp"
-  },
-  {
-    "tipoSensor": "temperatura",
-    "sala": "sala1",
-    "valor": 13,
-    "timestamp": "2025-11-19T02:07:06.630Z",
-    "topic": "lan/sala1/sensor/temp"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala2",
-    "valor": 11,
-    "timestamp": "2025-11-19T02:07:07.617Z",
-    "topic": "lan/sala2/sensor/hum"
-  },
-  {
-    "tipoSensor": "temperatura",
-    "sala": "sala2",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:07.621Z",
-    "topic": "lan/sala2/sensor/temp"
-  },
-  {
-    "tipoSensor": "temperatura",
-    "sala": "sala1",
-    "valor": 13,
-    "timestamp": "2025-11-19T02:07:07.626Z",
-    "topic": "lan/sala1/sensor/temp"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala1",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:07.631Z",
+    "valor": 26,
+    "timestamp": "2025-11-19T22:21:14.902Z",
     "topic": "lan/sala1/sensor/hum"
   },
   {
     "tipoSensor": "temperatura",
     "sala": "sala1",
-    "valor": 13,
-    "timestamp": "2025-11-19T02:07:08.616Z",
+    "valor": 4,
+    "timestamp": "2025-11-19T22:21:14.903Z",
     "topic": "lan/sala1/sensor/temp"
   },
   {
     "tipoSensor": "humedad",
     "sala": "sala2",
-    "valor": 11,
-    "timestamp": "2025-11-19T02:07:08.625Z",
+    "valor": 22,
+    "timestamp": "2025-11-19T22:21:14.914Z",
     "topic": "lan/sala2/sensor/hum"
   },
   {
     "tipoSensor": "temperatura",
     "sala": "sala2",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:08.630Z",
+    "valor": 16,
+    "timestamp": "2025-11-19T22:21:14.921Z",
     "topic": "lan/sala2/sensor/temp"
   },
   {
     "tipoSensor": "humedad",
     "sala": "sala1",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:08.635Z",
+    "valor": 26,
+    "timestamp": "2025-11-19T22:21:15.906Z",
     "topic": "lan/sala1/sensor/hum"
   },
   {
     "tipoSensor": "temperatura",
     "sala": "sala1",
-    "valor": 13,
-    "timestamp": "2025-11-19T02:07:09.621Z",
+    "valor": 4,
+    "timestamp": "2025-11-19T22:21:15.908Z",
     "topic": "lan/sala1/sensor/temp"
   },
   {
     "tipoSensor": "humedad",
     "sala": "sala2",
-    "valor": 11,
-    "timestamp": "2025-11-19T02:07:09.626Z",
+    "valor": 22,
+    "timestamp": "2025-11-19T22:21:15.913Z",
     "topic": "lan/sala2/sensor/hum"
   },
   {
     "tipoSensor": "temperatura",
     "sala": "sala2",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:09.630Z",
-    "topic": "lan/sala2/sensor/temp"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala1",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:09.635Z",
-    "topic": "lan/sala1/sensor/hum"
-  },
-  {
-    "tipoSensor": "temperatura",
-    "sala": "sala1",
-    "valor": 13,
-    "timestamp": "2025-11-19T02:07:10.618Z",
-    "topic": "lan/sala1/sensor/temp"
-  },
-  {
-    "tipoSensor": "temperatura",
-    "sala": "sala2",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:10.626Z",
-    "topic": "lan/sala2/sensor/temp"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala2",
-    "valor": 11,
-    "timestamp": "2025-11-19T02:07:10.631Z",
-    "topic": "lan/sala2/sensor/hum"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala1",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:10.636Z",
-    "topic": "lan/sala1/sensor/hum"
-  },
-  {
-    "tipoSensor": "temperatura",
-    "sala": "sala1",
-    "valor": 13,
-    "timestamp": "2025-11-19T02:07:11.620Z",
-    "topic": "lan/sala1/sensor/temp"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala2",
-    "valor": 11,
-    "timestamp": "2025-11-19T02:07:11.629Z",
-    "topic": "lan/sala2/sensor/hum"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala1",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:11.634Z",
-    "topic": "lan/sala1/sensor/hum"
-  },
-  {
-    "tipoSensor": "temperatura",
-    "sala": "sala2",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:11.639Z",
+    "valor": 16,
+    "timestamp": "2025-11-19T22:21:15.921Z",
     "topic": "lan/sala2/sensor/temp"
   },
   {
     "tipoSensor": "temperatura",
     "sala": "sala1",
-    "valor": 13,
-    "timestamp": "2025-11-19T02:07:12.621Z",
+    "valor": 4,
+    "timestamp": "2025-11-19T22:21:16.908Z",
     "topic": "lan/sala1/sensor/temp"
   },
   {
     "tipoSensor": "humedad",
+    "sala": "sala1",
+    "valor": 26,
+    "timestamp": "2025-11-19T22:21:16.909Z",
+    "topic": "lan/sala1/sensor/hum"
+  },
+  {
+    "tipoSensor": "humedad",
     "sala": "sala2",
-    "valor": 11,
-    "timestamp": "2025-11-19T02:07:12.630Z",
+    "valor": 22,
+    "timestamp": "2025-11-19T22:21:16.911Z",
     "topic": "lan/sala2/sensor/hum"
   },
   {
     "tipoSensor": "temperatura",
     "sala": "sala2",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:12.635Z",
+    "valor": 16,
+    "timestamp": "2025-11-19T22:21:16.920Z",
+    "topic": "lan/sala2/sensor/temp"
+  },
+  {
+    "tipoSensor": "temperatura",
+    "sala": "sala1",
+    "valor": 4,
+    "timestamp": "2025-11-19T22:21:17.915Z",
+    "topic": "lan/sala1/sensor/temp"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala1",
+    "valor": 26,
+    "timestamp": "2025-11-19T22:21:17.916Z",
+    "topic": "lan/sala1/sensor/hum"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala2",
+    "valor": 22,
+    "timestamp": "2025-11-19T22:21:17.924Z",
+    "topic": "lan/sala2/sensor/hum"
+  },
+  {
+    "tipoSensor": "temperatura",
+    "sala": "sala2",
+    "valor": 16,
+    "timestamp": "2025-11-19T22:21:17.929Z",
+    "topic": "lan/sala2/sensor/temp"
+  },
+  {
+    "tipoSensor": "temperatura",
+    "sala": "sala1",
+    "valor": 4,
+    "timestamp": "2025-11-19T22:21:18.924Z",
+    "topic": "lan/sala1/sensor/temp"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala1",
+    "valor": 26,
+    "timestamp": "2025-11-19T22:21:18.925Z",
+    "topic": "lan/sala1/sensor/hum"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala2",
+    "valor": 22,
+    "timestamp": "2025-11-19T22:21:18.931Z",
+    "topic": "lan/sala2/sensor/hum"
+  },
+  {
+    "tipoSensor": "temperatura",
+    "sala": "sala2",
+    "valor": 16,
+    "timestamp": "2025-11-19T22:21:18.935Z",
+    "topic": "lan/sala2/sensor/temp"
+  },
+  {
+    "tipoSensor": "temperatura",
+    "sala": "sala1",
+    "valor": 4,
+    "timestamp": "2025-11-19T22:21:19.938Z",
+    "topic": "lan/sala1/sensor/temp"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala1",
+    "valor": 26,
+    "timestamp": "2025-11-19T22:21:19.939Z",
+    "topic": "lan/sala1/sensor/hum"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala2",
+    "valor": 22,
+    "timestamp": "2025-11-19T22:21:19.944Z",
+    "topic": "lan/sala2/sensor/hum"
+  },
+  {
+    "tipoSensor": "temperatura",
+    "sala": "sala2",
+    "valor": 16,
+    "timestamp": "2025-11-19T22:21:19.950Z",
+    "topic": "lan/sala2/sensor/temp"
+  },
+  {
+    "tipoSensor": "temperatura",
+    "sala": "sala1",
+    "valor": 4,
+    "timestamp": "2025-11-19T22:21:20.945Z",
+    "topic": "lan/sala1/sensor/temp"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala1",
+    "valor": 26,
+    "timestamp": "2025-11-19T22:21:20.946Z",
+    "topic": "lan/sala1/sensor/hum"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala2",
+    "valor": 22,
+    "timestamp": "2025-11-19T22:21:20.953Z",
+    "topic": "lan/sala2/sensor/hum"
+  },
+  {
+    "tipoSensor": "temperatura",
+    "sala": "sala2",
+    "valor": 16,
+    "timestamp": "2025-11-19T22:21:20.963Z",
+    "topic": "lan/sala2/sensor/temp"
+  },
+  {
+    "tipoSensor": "temperatura",
+    "sala": "sala1",
+    "valor": 4,
+    "timestamp": "2025-11-19T22:21:21.961Z",
+    "topic": "lan/sala1/sensor/temp"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala1",
+    "valor": 26,
+    "timestamp": "2025-11-19T22:21:21.962Z",
+    "topic": "lan/sala1/sensor/hum"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala2",
+    "valor": 22,
+    "timestamp": "2025-11-19T22:21:21.963Z",
+    "topic": "lan/sala2/sensor/hum"
+  },
+  {
+    "tipoSensor": "temperatura",
+    "sala": "sala2",
+    "valor": 16,
+    "timestamp": "2025-11-19T22:21:21.973Z",
+    "topic": "lan/sala2/sensor/temp"
+  },
+  {
+    "tipoSensor": "temperatura",
+    "sala": "sala1",
+    "valor": 4,
+    "timestamp": "2025-11-19T22:21:22.962Z",
+    "topic": "lan/sala1/sensor/temp"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala1",
+    "valor": 26,
+    "timestamp": "2025-11-19T22:21:22.963Z",
+    "topic": "lan/sala1/sensor/hum"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala2",
+    "valor": 22,
+    "timestamp": "2025-11-19T22:21:22.965Z",
+    "topic": "lan/sala2/sensor/hum"
+  },
+  {
+    "tipoSensor": "temperatura",
+    "sala": "sala2",
+    "valor": 16,
+    "timestamp": "2025-11-19T22:21:22.974Z",
     "topic": "lan/sala2/sensor/temp"
   },
   {
     "tipoSensor": "humedad",
     "sala": "sala1",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:12.640Z",
+    "valor": 26,
+    "timestamp": "2025-11-19T22:21:23.970Z",
     "topic": "lan/sala1/sensor/hum"
   },
   {
     "tipoSensor": "humedad",
     "sala": "sala2",
-    "valor": 11,
-    "timestamp": "2025-11-19T02:07:13.631Z",
+    "valor": 22,
+    "timestamp": "2025-11-19T22:21:23.977Z",
     "topic": "lan/sala2/sensor/hum"
   },
   {
     "tipoSensor": "temperatura",
-    "sala": "sala1",
-    "valor": 13,
-    "timestamp": "2025-11-19T02:07:13.637Z",
-    "topic": "lan/sala1/sensor/temp"
-  },
-  {
-    "tipoSensor": "temperatura",
     "sala": "sala2",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:13.642Z",
+    "valor": 16,
+    "timestamp": "2025-11-19T22:21:23.987Z",
     "topic": "lan/sala2/sensor/temp"
   },
   {
-    "tipoSensor": "humedad",
+    "tipoSensor": "temperatura",
     "sala": "sala1",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:13.648Z",
-    "topic": "lan/sala1/sensor/hum"
-  },
-  {
-    "tipoSensor": "humedad",
-    "sala": "sala2",
-    "valor": 11,
-    "timestamp": "2025-11-19T02:07:14.632Z",
-    "topic": "lan/sala2/sensor/hum"
+    "valor": 4,
+    "timestamp": "2025-11-19T22:21:24.026Z",
+    "topic": "lan/sala1/sensor/temp"
   },
   {
     "tipoSensor": "temperatura",
     "sala": "sala1",
-    "valor": 13,
-    "timestamp": "2025-11-19T02:07:14.637Z",
+    "valor": 4,
+    "timestamp": "2025-11-19T22:21:24.984Z",
     "topic": "lan/sala1/sensor/temp"
   },
   {
     "tipoSensor": "humedad",
     "sala": "sala1",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:14.643Z",
+    "valor": 26,
+    "timestamp": "2025-11-19T22:21:24.986Z",
     "topic": "lan/sala1/sensor/hum"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala2",
+    "valor": 22,
+    "timestamp": "2025-11-19T22:21:24.992Z",
+    "topic": "lan/sala2/sensor/hum"
   },
   {
     "tipoSensor": "temperatura",
     "sala": "sala2",
-    "valor": 94,
-    "timestamp": "2025-11-19T02:07:14.648Z",
+    "valor": 16,
+    "timestamp": "2025-11-19T22:21:25.000Z",
+    "topic": "lan/sala2/sensor/temp"
+  },
+  {
+    "tipoSensor": "temperatura",
+    "sala": "sala1",
+    "valor": 4,
+    "timestamp": "2025-11-19T22:21:25.988Z",
+    "topic": "lan/sala1/sensor/temp"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala1",
+    "valor": 26,
+    "timestamp": "2025-11-19T22:21:25.989Z",
+    "topic": "lan/sala1/sensor/hum"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala2",
+    "valor": 22,
+    "timestamp": "2025-11-19T22:21:25.995Z",
+    "topic": "lan/sala2/sensor/hum"
+  },
+  {
+    "tipoSensor": "temperatura",
+    "sala": "sala2",
+    "valor": 16,
+    "timestamp": "2025-11-19T22:21:26.000Z",
+    "topic": "lan/sala2/sensor/temp"
+  },
+  {
+    "tipoSensor": "temperatura",
+    "sala": "sala1",
+    "valor": 4,
+    "timestamp": "2025-11-19T22:21:26.994Z",
+    "topic": "lan/sala1/sensor/temp"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala1",
+    "valor": 26,
+    "timestamp": "2025-11-19T22:21:26.995Z",
+    "topic": "lan/sala1/sensor/hum"
+  },
+  {
+    "tipoSensor": "humedad",
+    "sala": "sala2",
+    "valor": 22,
+    "timestamp": "2025-11-19T22:21:26.997Z",
+    "topic": "lan/sala2/sensor/hum"
+  },
+  {
+    "tipoSensor": "temperatura",
+    "sala": "sala2",
+    "valor": 16,
+    "timestamp": "2025-11-19T22:21:27.006Z",
     "topic": "lan/sala2/sensor/temp"
   }
 ]
